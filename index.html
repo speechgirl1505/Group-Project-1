@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Project 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" text="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+    <img src="" id="bg">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#"><h2><i class="fas fa-map-signs"></i> Path to Peak <i class="fas fa-mountain"></i></h2></a>
+        <button type="button" class="btn btn-outline-secondary" id="takeMeHome">Take Me Home</button>
+        <!-- <form class="form-inline"> -->
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Take Me Home</button> -->
+        <!-- </form> -->
+    </nav>
+
+    <!-- <button class="btn-primary btn" id="stateButton">BUTTON</button> -->
+    <!-- Navbar-->
+
+    <div class="main-container container mx-auto">
+        <div class="cardsGoHere">
+      <!-- In the main container we will start with the leafLet Map showing all the tooltips for the National Parks -->
+        <h2 class="npfont"><i class="fas fa-compass"></i> PUT SOMETHING IN ME <i class="fas fa-tree"></i></h2>
+         <div>
+             <div>
+                 <h3>Fill me!</h3>
+             </div>
+         </div>
+        <!-- The user will put a state in and on click the container will change the map into cards with all the parks in that state-->
+        <!-- on click of the card a modal will pop up with all the info -->
+         <form class="form">
+             <div id="searchBar">
+                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                 <button id="stateButton"><i class="fas fa-search"></i></button>
+
+             </div>
+            <button class="btn btn-outline-secondary my-2 my-sm-0" id="searchButton" type="submit"><i class="fas fa-search"></i> Search My State</button>
+        </form>
+    </div>
+    </div>
+
+    <!-- Click function "take me home" needs to reset us back to the home page-->
+    <footer>
+        <div class="container" id="card">
+            Copyright &copy;
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/stateCardGenerator.js"></script>
+
+</body>
+
+</html>
