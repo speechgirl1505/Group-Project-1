@@ -4,7 +4,7 @@ function stateCardGenerator(response) {
     // Generating all park names and designations in the state
     var numParks = parkInfo.data.length
     console.log(numParks)
-    var stateContainer = $("<container id='stateCardContainer'>")
+    var stateContainer = $(".cardsGoHere");
     for (i = 0; i < numParks; i++) {
         var parkName = parkInfo.data[i].fullName;
         userSearch = parkName;
@@ -19,7 +19,6 @@ function stateCardGenerator(response) {
         var stateParkCard = $("<div>")
         // Append card elements 
         stateParkCard.addClass("card")
-        stateParkCard.attr("style", "width: 18rem;");
         var stateImage = $("<img>").attr({ src: parkImage, class: "card-img-top", alt: "..." })
         stateParkCard.append(stateImage)
         var stateParkCardBody = $("<div class='card-body'>")
@@ -31,7 +30,6 @@ function stateCardGenerator(response) {
         stateParkCardP.text(parkDesignation);
         stateParkCard.append(stateParkCardP);
         stateContainer.append(stateParkCard);
-        stateContainer.appendTo($("#card"));
     }
     console.log(parkInfo)
 }
