@@ -7,13 +7,11 @@ function imageScroller() {
         if (index === images.length - 1) {
             index = 0;
             $("#bg").attr("src", images[index]);
-            console.log(index);
         } else {
             index++;
             $("#bg").attr("src", images[index]);
-            console.log(index);
         }
-    }, 4000);
+    }, 6000);
 }
 
 
@@ -23,8 +21,7 @@ $("#searchButton").click(function () {
     event.preventDefault();
     $("#searchBar").toggle();
     $("#searchButton").toggle();
-    
-    
+
 });
 // API
 /*Global Varibales=============================================================================================
@@ -82,26 +79,30 @@ $("#stateButton").on("click", bothAjaxRequests);
 
 
 
+
 // HOME PAGE====================================================================================================
 // "take me home" button says take me home
 $("#takeMeHome").on("click", function () {
     event.preventDefault();
     $("#searchBar").toggle();
     $("#searchButton").toggle();
-    $(".cardsGoHere").toggle();
+    $(".cardsGoHere").empty();
   //console.log(alert("this button works!"));
-
 });
+$('#showModal').on('click', function() {
+    // jQuery.noConflict();
+    $('#showModal').modal('show');
+    });
 
-$('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('.modal-title').text('New message to ' + recipient)
-    modal.find('.modal-body input').val(recipient)
-  })
+// $('#exampleModal').on('show.bs.modal', function (event) {
+//     var button = $(event.relatedTarget) // Button that triggered the modal
+//     var recipient = button.data('whatever') // Extract info from data-* attributes
+//     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+//     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+//     var modal = $(this)
+//     modal.find('.modal-title').text('New message to ' + recipient)
+//     modal.find('.modal-body input').val(recipient)
+//   })
 
 
   // LINDSAY: ON STATE PAGE ======================================================================================

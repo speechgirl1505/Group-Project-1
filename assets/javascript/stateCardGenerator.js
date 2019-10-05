@@ -34,6 +34,7 @@ function stateCardGenerator(response) {
         stateParkButton.attr('data-toggle', 'modal')
         stateParkButton.attr('data-target', 'exampleModalCenter')
         stateParkButton.attr('type', 'button')
+        stateParkButton.attr('id', 'showModal')
         stateParkCard.append(stateParkButton);
 
     }

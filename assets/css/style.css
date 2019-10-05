@@ -8,16 +8,23 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+  h1 {
+      color: rgb(15, 63, 39);
+  }
+
+h2, .fas {
+    color: rgb(75, 56, 48);
+}
+
   nav {
     position: fixed;
     z-index: 99;
     width: 100%;
     margin: 0 0 30px;
-    overflow: auto;
+    overflow: auto; 
     color: #ffffff;
     background: #ffffff;
-    border-bottom: 4px solid rgb(99, 85, 128);
+    border-bottom: 4px solid rgb(75, 56, 48);
     opacity: 0.8;
   }
   
@@ -26,7 +33,7 @@
     padding-left: 15px;
     margin-left: 15px;
     line-height: 18px;
-    color: rgb(99, 85, 128);
+    color: rgb(15, 63, 39);
     text-decoration: none;
   }
   
@@ -39,7 +46,7 @@
     background-color: whitesmoke;
     opacity: 0.8;
     text-align: center;
-    border: 4px solid rgb(99, 85, 128);
+    border: 4px solid rgb(15, 63, 39);
   }
   
   footer {
@@ -48,7 +55,7 @@
     color: #ffffff;
     color: rgb(99, 85, 128);
     background: whitesmoke;
-    border-top: 4px solid rgb(99, 85, 128);
+    border-top: 4px solid rgb(75, 56, 48);
     opacity: 0.8;
     margin-top: 115px;
     text-align: center;
@@ -90,7 +97,7 @@
   }
 
   .card {
-      border: 3px solid rgb(99, 85, 128);
+      border: 3px solid rgb(75, 56, 48);
       border-radius: 10px;
   }
   
