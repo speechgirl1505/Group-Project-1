@@ -19,9 +19,26 @@ imageScroller();
 
 $("#searchButton").click(function () {
     event.preventDefault();
-    $("#searchBar").toggle();
-    $("#searchButton").toggle();
+    $("#searchBar").show();
+    $("#searchButton").hide();
+    
+});
 
+$("#stateButton").click(function(){
+    event.preventDefault();
+    $("#putItIn").hide();
+    $("#fillMe").hide();
+    $("#searchBar").hide();
+    $("#searchButton").hide();
+});
+
+$("#takeMeHome").on("click", function () {
+    event.preventDefault();
+    $("#searchBar").hide();
+    $("#searchButton").show();
+    $("#putItIn").show();
+    $("#fillMe").show();
+    $(".cardsGoHere").empty();
 });
 // API
 /*Global Varibales=============================================================================================
@@ -82,13 +99,6 @@ $("#stateButton").on("click", bothAjaxRequests);
 
 // HOME PAGE====================================================================================================
 // "take me home" button says take me home
-$("#takeMeHome").on("click", function () {
-    event.preventDefault();
-    $("#searchBar").toggle();
-    $("#searchButton").toggle();
-    $(".cardsGoHere").empty();
-  //console.log(alert("this button works!"));
-});
 
 // $('#showModal').on('click', function() {
 //     // jQuery.noConflict();

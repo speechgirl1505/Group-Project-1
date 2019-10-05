@@ -28,14 +28,14 @@ h2, .fas {
     opacity: 0.8;
   }
   
-  nav a {
+  /* nav a {
     display: inline-block;
     padding-left: 15px;
     margin-left: 15px;
     line-height: 18px;
     color: rgb(15, 63, 39);
     text-decoration: none;
-  }
+  } */
   
   #searchBar {
     display: none;
@@ -101,3 +101,13 @@ h2, .fas {
       border-radius: 10px;
   }
   
+  .fab {
+    color: rgb(15, 63, 39);
+  }
+
+  input {
+    box-shadow: 0 0 5px rgb(15, 63, 39);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgb(15, 63, 39);
+  }
