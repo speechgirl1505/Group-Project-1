@@ -89,10 +89,11 @@ $("#takeMeHome").on("click", function () {
     $(".cardsGoHere").empty();
   //console.log(alert("this button works!"));
 });
-$('#showModal').on('click', function() {
-    // jQuery.noConflict();
-    $('#showModal').modal('show');
-    });
+
+// $('#showModal').on('click', function() {
+//     // jQuery.noConflict();
+//     $('#showModal').modal('show');
+//     });
 
 // $('#exampleModal').on('show.bs.modal', function (event) {
 //     var button = $(event.relatedTarget) // Button that triggered the modal

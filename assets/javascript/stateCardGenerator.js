@@ -40,7 +40,6 @@ function stateCardGenerator(response) {
     }
     console.log(parkInfo)
     
-    // $(selector).attr({attribute:value, attribute:value,...})
 
 
 
