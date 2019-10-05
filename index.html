@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,6 +36,8 @@
         <h2 class="npfont"><i class="fas fa-compass"></i> PUT SOMETHING IN ME <i class="fas fa-tree"></i></h2>
          <div>
              <div>
+                    <!-- <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdIGcLx6BTyA" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+                    <!-- <iframe src="https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXdIGcLx6BTyA?si=83acLLjURVGRu0nvCE6DLQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
                  <h3>Fill me!</h3>
              </div>
          </div>
@@ -43,7 +45,7 @@
         <!-- on click of the card a modal will pop up with all the info -->
          <form class="form">
              <div id="searchBar">
-                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                 <input class="form-control mr-sm-2 animated rollIn" id="state-entered" type="search" placeholder="Search" aria-label="Search" >
                  <button id="stateButton"><i class="fas fa-search"></i></button>
 
              </div>
@@ -56,7 +58,30 @@
     <div class="container" >
         <div class="row" id="card"></div>
     </div>
-
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Launch demo modal
+          </button> -->
+          
+           
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div> 
     <!-- Click function "take me home" needs to reset us back to the home page-->
     <footer>
         <div class="container" >

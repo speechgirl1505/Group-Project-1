@@ -18,11 +18,11 @@ function stateCardGenerator(response) {
         // Create new div to hold the card
         var stateParkCard = $("<div>")
         // Append card elements 
-        stateParkCard.addClass("card")
+        stateParkCard.addClass("card card-body")
         var stateImage = $("<img>").attr({ src: parkImage, class: "card-img-top", alt: "..." })
         stateParkCard.append(stateImage)
-        var stateParkCardBody = $("<div class='card-body'>")
-        stateParkCard.append(stateParkCardBody)
+        // var stateParkCardBody = $("<div class='card-body'>")
+        // stateParkCard.append(stateParkCardBody)
         var stateParkCardHeader = $("<h5 class='card-title'>")
         stateParkCardHeader.text(parkName)
         stateParkCard.append(stateParkCardHeader);
@@ -30,6 +30,17 @@ function stateCardGenerator(response) {
         stateParkCardP.text(parkDesignation);
         stateParkCard.append(stateParkCardP);
         stateContainer.append(stateParkCard);
+        var stateParkButton = $("<button>TELL ME MORE!</button>");
+        stateParkButton.attr('data-toggle', 'modal')
+        stateParkButton.attr('data-target', 'exampleModalCenter')
+        stateParkButton.attr('type', 'button')
+        stateParkCard.append(stateParkButton);
+
     }
     console.log(parkInfo)
+    
+    // $(selector).attr({attribute:value, attribute:value,...})
+
+
+
 }

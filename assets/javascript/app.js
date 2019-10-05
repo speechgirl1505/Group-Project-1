@@ -1,40 +1,38 @@
-/*Global Varibales=============================================================================================
-*/ var parkInfo;
-var imageResponse;
-var stateSelected = "TX";
-var unsplashSearch = "";
-
-
-
 function imageScroller() {
-  var images = ["assets/images/bg2 copy.jpeg", "assets/images/fallroad copy.jpg", "assets/images/bryce2 copy.jpeg", "assets/images/tetons copy.jpeg", "assets/images/beardunes copy.jpeg", "assets/images/antelope copy.jpeg", "assets/images/bison copy.jpeg", "assets/images/rocky copy.jpeg", "assets/images/bear copy.jpeg", "assets/images/bryce copy.jpeg", "assets/images/fjords copy.jpeg", "assets/images/geyser copy.jpeg", "assets/images/joshua copy.jpeg", "assets/images/glacier copy.jpeg", "assets/images/moose copy.jpeg", "assets/images/redwoods copy.jpeg", "assets/images/northrim copy.jpeg", "assets/images/silent copy.jpeg", "assets/images/whitesands copy.jpeg", "assets/images/spring copy.jpeg", "assets/images/yosemite copy.jpeg", "assets/images/ysfalls copy.jpeg", "assets/images/zion copy.jpeg"];
-  var index = 0;
-  $("#bg").attr("src", images[index]);
-
-  setInterval(function () {
-    if (index === images.length - 1) {
-      index = 0;
-      $("#bg").attr("src", images[index]);
-      console.log(index);
-    } else {
-      index++;
-      $("#bg").attr("src", images[index]);
-      console.log(index);
-    }
-  }, 4000);
+    var images = ["assets/images/bg2 copy.jpeg", "assets/images/fallroad copy.jpg", "assets/images/bryce2 copy.jpeg", "assets/images/tetons copy.jpeg", "assets/images/beardunes copy.jpeg", "assets/images/antelope copy.jpeg", "assets/images/bison copy.jpeg", "assets/images/rocky copy.jpeg", "assets/images/bear copy.jpeg", "assets/images/bryce copy.jpeg", "assets/images/fjords copy.jpeg", "assets/images/geyser copy.jpeg", "assets/images/joshua copy.jpeg", "assets/images/glacier copy.jpeg", "assets/images/moose copy.jpeg", "assets/images/redwoods copy.jpeg", "assets/images/northrim copy.jpeg", "assets/images/silent copy.jpeg", "assets/images/whitesands copy.jpeg", "assets/images/spring copy.jpeg", "assets/images/yosemite copy.jpeg", "assets/images/ysfalls copy.jpeg", "assets/images/zion copy.jpeg"];
+    var index = 0;
+    $("#bg").attr("src", images[index]);
+    
+    setInterval(function () {
+        if (index === images.length - 1) {
+            index = 0;
+            $("#bg").attr("src", images[index]);
+            console.log(index);
+        } else {
+            index++;
+            $("#bg").attr("src", images[index]);
+            console.log(index);
+        }
+    }, 4000);
 }
 
 
 imageScroller();
 
 $("#searchButton").click(function () {
-  event.preventDefault();
-  $("#searchBar").toggle();
-  $("#searchButton").toggle();
-
-
+    event.preventDefault();
+    $("#searchBar").toggle();
+    $("#searchButton").toggle();
+    
+    
 });
 // API
+/*Global Varibales=============================================================================================
+*/ 
+var parkInfo;
+var imageResponse;
+var stateSelected = "TX";
+var unsplashSearch = "";
 
 //Images fixed and working AJAX
 //Unsplash API Below: We are working on having the Unsplash API information incorporate photo based on image and location.
@@ -66,6 +64,7 @@ function NPSAjaxRequest() {
 }
 
 function NPSAPICall(response) {
+    console.log(response);
   stateCardGenerator(response);
   // modelGenerator(response)
 }
@@ -86,9 +85,25 @@ $("#stateButton").on("click", bothAjaxRequests);
 // HOME PAGE====================================================================================================
 // "take me home" button says take me home
 $("#takeMeHome").on("click", function () {
+    event.preventDefault();
+    $("#searchBar").toggle();
+    $("#searchButton").toggle();
+    $(".cardsGoHere").toggle();
   //console.log(alert("this button works!"));
 
-})
+});
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body input').val(recipient)
+  })
+
+
   // LINDSAY: ON STATE PAGE ======================================================================================
 
   // When user enters a state into the search bar it hides container containing home page html

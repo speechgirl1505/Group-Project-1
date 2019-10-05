@@ -88,4 +88,9 @@
       max-width: 22%;
       margin-bottom: 3rem;   
   }
+
+  .card {
+      border: 3px solid rgb(99, 85, 128);
+      border-radius: 10px;
+  }
   
