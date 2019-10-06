@@ -47,6 +47,8 @@ var parkInfo;
 var imageResponse;
 var stateSelected = "TX";
 var unsplashSearch = "";
+var region;
+var beerResponse= "";
 
 //Images fixed and working AJAX
 //Unsplash API Below: We are working on having the Unsplash API information incorporate photo based on image and location.
@@ -82,19 +84,28 @@ function NPSAPICall(response) {
   stateCardGenerator(response);
   // modelGenerator(response)
 }
-
 // For state requests
-function bothAjaxRequests(event) {
+// function beerAPI() {
+//     var beerURL ="https://sandbox-api.brewerydb.com/v2/" + region + "/?key=32a1127f99142177f29bc67c78a8a6d6"
+//     // "https://api.unsplash.com/photos/random/?client_id=b9429332b4931ea777d5218c2dd0c972e59aa521cdd7693c57ae030db53d17ef&query=" + region; //<---here is where our users search generates image related from API
+//     $.ajax({
+//       method: "GET: /brewery/:breweryId/locations",
+//       url: beerURL
+//     }).then(beerAPI);
+//   }
+//   function beerAPICall(beerdbResponse) {
+//     console.log(beerResponse);
+//     beerResponse = beerdbResponse;
+    
+//   };
+  
+  function bothAjaxRequests(event) {
 event.preventDefault();
-
 
   unsplashAjaxRequest();
   NPSAjaxRequest();
 }
 $("#stateButton").on("click", bothAjaxRequests);
-
-
-
 
 
 // HOME PAGE====================================================================================================
@@ -123,14 +134,11 @@ $("#stateButton").on("click", bothAjaxRequests);
   // If the state is not a real state name (misspelled, not in the US, etc.,) display error message
 
   // Populates screen with cards of each national park in the state
+  // MODALS =======================================================================================================
 
-  // Each card contains park name (AT LEAST--WE WILL DISCUSS AS GROUP WHAT ELSE TO DISPLAY)
+  // On state page with all parks: when user clicks on a card, card pops up a modal about that park
 
-  // MODELS =======================================================================================================
-
-  // On state page with all parks: when user clicks on a card, card pops up a model about that park
-
-  // Individual park model: Populates with park information from NPS API, populates with brewery info from brewery API
+  // Individual park modal: Populates with park information from NPS API, populates with brewery info from brewery API
 
 
 

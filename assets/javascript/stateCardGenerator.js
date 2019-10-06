@@ -30,11 +30,11 @@ function stateCardGenerator(response) {
         stateParkCardP.text(parkDesignation);
         stateParkCard.append(stateParkCardP);
         stateContainer.append(stateParkCard);
-        var stateParkButton = $("<button>TELL ME MORE!</button>");
-        stateParkButton.attr('data-toggle', 'modal')
-        stateParkButton.attr('data-target', 'exampleModalCenter')
-        stateParkButton.attr('type', 'button')
-        stateParkButton.attr('id', 'showModal')
+        var stateParkButton = $("<button>TELL ME MORE</button>");
+        stateParkButton.attr('data-toggle', 'modal');
+        stateParkButton.attr('data-target', 'exampleModalCenter');
+        stateParkButton.attr('type', 'button');
+        stateParkButton.attr('id', 'showModal');
         stateParkCard.append(stateParkButton);
 
     }
@@ -43,4 +43,9 @@ function stateCardGenerator(response) {
 
 
 
-}
+};
+$('#showModal').on('click', function(ev) {
+        jQuery.noConflict();
+        console.log(ev);
+        $('#showModal').modal('show');
+        });

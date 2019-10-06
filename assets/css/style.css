@@ -1,34 +1,30 @@
 @font-face {
-    font-family: "npfont";
-    src: url("./NationalPark-Heavy.otf");
-    /* src:url('../fonts/et-lined41d.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/et-line.woff') format('woff'),
-          url('../fonts/et-line.ttf') format('truetype'),
-          url('../fonts/et-line.svg#et-line') format('svg'); */
-    font-weight: normal;
-    font-style: normal;
-  }
-  h1 {
-      color: rgb(15, 63, 39);
-  }
-
-h2, .fas {
-    color: rgb(75, 56, 48);
+  font-family: "npfont";
+  src: url("./NationalPark-Heavy.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+h1, h2, h3 {
+  color: rgb(15, 63, 39);
 }
 
-  nav {
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    margin: 0 0 30px;
-    overflow: auto; 
-    color: #ffffff;
-    background: #ffffff;
-    border-bottom: 4px solid rgb(75, 56, 48);
-    opacity: 0.8;
-  }
-  
-  /* nav a {
+.fas {
+  color: rgb(75, 56, 48);
+}
+
+nav {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  margin: 0 0 30px;
+  overflow: auto;
+  color: #ffffff;
+  background: #ffffff;
+  border-bottom: 4px solid rgb(75, 56, 48);
+  opacity: 0.8;
+}
+
+/* nav a {
     display: inline-block;
     padding-left: 15px;
     margin-left: 15px;
@@ -36,78 +32,91 @@ h2, .fas {
     color: rgb(15, 63, 39);
     text-decoration: none;
   } */
-  
-  #searchBar {
+
+#searchBar {
+  display: none;
+}
+.main-container {
+  padding: 20px;
+  margin: 20px;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  text-align: center;
+  border: 4px solid rgb(15, 63, 39);
+}
+
+footer {
+  clear: both;
+  font-size: 12px;
+  color: #ffffff;
+  color: rgb(99, 85, 128);
+  background: whitesmoke;
+  border-top: 4px solid rgb(75, 56, 48);
+  opacity: 0.8;
+  margin-top: 115px;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#bg {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  max-width: 100%;
+  /* max-height: 100%; */
+}
+
+body {
+  font-family: npfont;
+}
+
+.cardsGoHere {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cardsGoHere .card {
+  max-width: 22%;
+  margin-bottom: 3rem;
+}
+
+.card {
+  border: 2px solid rgb(15, 63, 39);
+  border-radius: 10px;
+}
+
+.fab {
+  color: rgb(15, 63, 39);
+}
+
+input {
+  box-shadow: 0 0 5px rgb(15, 63, 39);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgb(15, 63, 39);
+}
+
+.form-control,
+.stateBtnClass {
+  animation-duration: 3s;
+}
+
+#showModal {
+    color: rgb(75, 56, 48);
+    border-radius: 10px;
+    border: 2px solid rgb(15, 63, 39);
+}
+
+.modal {
     display: none;
-  }
-  .main-container {
-    padding: 20px;
-    margin: 20px;
-    background-color: whitesmoke;
-    opacity: 0.8;
-    text-align: center;
-    border: 4px solid rgb(15, 63, 39);
-  }
-  
-  footer {
-    clear: both;
-    font-size: 12px;
-    color: #ffffff;
-    color: rgb(99, 85, 128);
-    background: whitesmoke;
-    border-top: 4px solid rgb(75, 56, 48);
-    opacity: 0.8;
-    margin-top: 115px;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
-  
-  
-    #bg {
-      position: fixed;
-      right: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
-      max-width: 100%;
-      /* max-height: 100%; */
-  
-  }
-  
-  body {
-    font-family: npfont;
-  }
-
-  .cardsGoHere {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;   
-  }
-
-  .cardsGoHere .card {
-      max-width: 22%;
-      margin-bottom: 3rem;   
-  }
-
-  .card {
-      border: 3px solid rgb(75, 56, 48);
-      border-radius: 10px;
-  }
-  
-  .fab {
-    color: rgb(15, 63, 39);
-  }
-
-  input {
-    box-shadow: 0 0 5px rgb(15, 63, 39);
-    padding: 3px 0px 3px 3px;
-    margin: 5px 1px 3px 0px;
-    border: 1px solid rgb(15, 63, 39);
-  }
+}
