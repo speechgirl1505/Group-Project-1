@@ -119,7 +119,11 @@ input {
 }
 
 .form-control,
-.stateBtnClass {
+.stateBtnClass,
+.typeStateText,
+.parksNear,
+.spotify,
+.byeFoot {
   animation-duration: 3s;
 }
 
