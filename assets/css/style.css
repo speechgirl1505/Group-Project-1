@@ -24,15 +24,6 @@ nav {
   opacity: 0.8;
 }
 
-/* nav a {
-    display: inline-block;
-    padding-left: 15px;
-    margin-left: 15px;
-    line-height: 18px;
-    color: rgb(15, 63, 39);
-    text-decoration: none;
-  } */
-
 #searchBar {
   display: none;
 }
@@ -120,3 +111,12 @@ input {
 .modal {
     display: none;
 }
+
+.form-control:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 5px rgb(15, 63, 39)}
+
+  /* media queries{
+  bg- max-width:none:
+  .main-container margin bottom 100px;} */

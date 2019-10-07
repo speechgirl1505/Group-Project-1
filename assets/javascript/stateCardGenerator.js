@@ -14,28 +14,23 @@ function stateCardGenerator(response) {
         console.log(parkName);
         console.log(parkDesignation);
 
-        // State Cards Generator
-        // Create new div to hold the card
-        var stateParkCard = $("<div>")
-        // Append card elements 
-        stateParkCard.addClass("card card-body")
-        var stateImage = $("<img>").attr({ src: parkImage, class: "card-img-top", alt: "..." })
-        stateParkCard.append(stateImage)
-        // var stateParkCardBody = $("<div class='card-body'>")
-        // stateParkCard.append(stateParkCardBody)
-        var stateParkCardHeader = $("<h5 class='card-title'>")
-        stateParkCardHeader.text(parkName)
-        stateParkCard.append(stateParkCardHeader);
-        var stateParkCardP = $("<p class ='card-text'>");
-        stateParkCardP.text(parkDesignation);
-        stateParkCard.append(stateParkCardP);
-        stateContainer.append(stateParkCard);
-        var stateParkButton = $("<button>TELL ME MORE</button>");
-        stateParkButton.attr('data-toggle', 'modal');
-        stateParkButton.attr('data-target', 'exampleModalCenter');
-        stateParkButton.attr('type', 'button');
-        stateParkButton.attr('id', 'showModal');
-        stateParkCard.append(stateParkButton);
+// State Cards Generator
+       // Create new div to hold the card
+       var stateParkCard = $("<div>")
+       // Append card elements
+       stateParkCard.addClass("card card-body")
+       stateParkCard.attr({ "data-toggle": "modal", "data-target": "#exampleModalCenter", "data-value": parkName });
+       var stateImage = $("<img>").attr({ src: parkImage, class: "card-img-top", alt: "..." })
+       stateParkCard.append(stateImage)
+       // var stateParkCardBody = $("<div class='card-body'>")
+       // stateParkCard.append(stateParkCardBody)
+       var stateParkCardHeader = $("<h5 class='card-title'>")
+       stateParkCardHeader.text(parkName)
+       stateParkCard.append(stateParkCardHeader);
+       var stateParkCardP = $("<p class ='card-text'>");
+       stateParkCardP.text(parkDesignation);
+       stateParkCard.append(stateParkCardP);
+       stateContainer.append(stateParkCard);
 
     }
     console.log(parkInfo)
@@ -44,8 +39,4 @@ function stateCardGenerator(response) {
 
 
 };
-$('#showModal').on('click', function(ev) {
-        jQuery.noConflict();
-        console.log(ev);
-        $('#showModal').modal('show');
-        });
+
