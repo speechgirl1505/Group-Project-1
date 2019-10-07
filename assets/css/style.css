@@ -12,6 +12,15 @@ h1, h2, h3 {
   color: rgb(75, 56, 48);
 }
 
+.spotify, .byeFoot, #putItIn, #searchButton, #takeMeHome {
+  display: none;
+}
+
+#startMeUp {
+  max-width: 450px;
+  max-height: 550px;
+}
+
 nav {
   position: fixed;
   z-index: 99;
