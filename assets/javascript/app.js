@@ -1,5 +1,5 @@
 function imageScroller() {
-  var images = ["assets/images/bg2 copy.jpeg", "assets/images/fallroad copy.jpg", "assets/images/bryce2 copy.jpeg", "assets/images/tetons copy.jpeg", "assets/images/beardunes copy.jpeg", "assets/images/antelope copy.jpeg", "assets/images/bison copy.jpeg", "assets/images/rocky copy.jpeg", "assets/images/bear copy.jpeg", "assets/images/bryce copy.jpeg", "assets/images/fjords copy.jpeg", "assets/images/geyser copy.jpeg", "assets/images/joshua copy.jpeg", "assets/images/glacier copy.jpeg", "assets/images/moose copy.jpeg", "assets/images/redwoods copy.jpeg", "assets/images/northrim copy.jpeg", "assets/images/silent copy.jpeg", "assets/images/whitesands copy.jpeg", "assets/images/spring copy.jpeg", "assets/images/yosemite copy.jpeg", "assets/images/ysfalls copy.jpeg", "assets/images/zion copy.jpeg"];
+  var images = ["assets/images/bg2.jpeg", "assets/images/fallroad.jpg", "assets/images/bryce2.jpeg", "assets/images/tetons.jpeg", "assets/images/beardunes.jpeg", "assets/images/antelope.jpeg", "assets/images/bison.jpeg", "assets/images/rocky.jpeg", "assets/images/bear.jpeg", "assets/images/bryce.jpeg", "assets/images/fjords.jpeg", "assets/images/geyser.jpeg", "assets/images/joshua.jpeg", "assets/images/glacier.jpeg", "assets/images/moose.jpeg", "assets/images/redwoods.jpeg", "assets/images/northrim.jpeg", "assets/images/silent.jpeg", "assets/images/whitesands.jpeg", "assets/images/spring.jpeg", "assets/images/yosemite.jpeg", "assets/images/ysfalls.jpeg", "assets/images/zion.jpeg"];
   var index = 0;
   $("#bg").attr("src", images[index]);
 
@@ -40,8 +40,7 @@ $("#stateButton").click(function () {
   $("#fillMe").hide();
   $("#searchBar").hide();
   $("#searchButton").hide();
-  $("#state-entered").val("");
-  
+  // $("#state-entered").val("");
 });
 
 $("#takeMeHome").on("click", function () {
@@ -56,8 +55,8 @@ $("#takeMeHome").on("click", function () {
   $(".NPSBtn").show();
   $(".clickEnter").show();
   $("#takeMeHome").hide();
+  $("#state-entered").val("");
 });
-
 
 
 // API
@@ -69,7 +68,6 @@ var imageResponse;
 var stateSelected = "";
 var unsplashSearch = "";
 var region;
-var beerResponse = "";
 
 //Images fixed and working AJAX
 //Unsplash API Below: We are working on having the Unsplash API information incorporate photo based on image and location.
@@ -96,10 +94,10 @@ function NPSAjaxRequest() {
   var state = $(".form-control").val().trim();
   console.log("STATE: " + state);
   if (state.length > 2) {
-    var stateAcronym = abbrState(state, 'abbr')
-    stateSelected = stateAcronym;
-    console.log("ACRONYM: " + stateAcronym);
-    console.log(stateSelected)
+  var stateAcronym = abbrState(state, 'abbr')
+  stateSelected = stateAcronym;
+  console.log("ACRONYM: " + stateAcronym);
+  console.log(stateSelected)
   }
   else {
     stateSelected = state;
@@ -118,20 +116,6 @@ function NPSAPICall(response) {
   stateCardGenerator(response);
   // modelGenerator(response)
 }
-// For state requests
-// function beerAPI() {
-//     var beerURL ="https://sandbox-api.brewerydb.com/v2/" + region + "/?key=32a1127f99142177f29bc67c78a8a6d6"
-//     // "https://api.unsplash.com/photos/random/?client_id=b9429332b4931ea777d5218c2dd0c972e59aa521cdd7693c57ae030db53d17ef&query=" + region; //<---here is where our users search generates image related from API
-//     $.ajax({
-//       method: "GET: /brewery/:breweryId/locations",
-//       url: beerURL
-//     }).then(beerAPI);
-//   }
-//   function beerAPICall(beerdbResponse) {
-//     console.log(beerResponse);
-//     beerResponse = beerdbResponse;
-
-//   };
 
 function bothAjaxRequests(event) {
   event.preventDefault();
@@ -143,24 +127,6 @@ $("#stateButton").on("click", bothAjaxRequests);
 
 
 // HOME PAGE====================================================================================================
-// "take me home" button says take me home
-
-// $('#showModal').on('click', function() {
-//     // jQuery.noConflict();
-//     $('#showModal').modal('show');
-//     });
-
-// $('#exampleModal').on('show.bs.modal', function (event) {
-//     var button = $(event.relatedTarget) // Button that triggered the modal
-//     var recipient = button.data('whatever') // Extract info from data-* attributes
-//     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-//     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-//     var modal = $(this)
-//     modal.find('.modal-title').text('New message to ' + recipient)
-//     modal.find('.modal-body input').val(recipient)
-//   })
-
-
 // LINDSAY: ON STATE PAGE ======================================================================================
 
 // When user enters a state into the search bar it hides container containing home page html
