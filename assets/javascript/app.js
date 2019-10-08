@@ -40,6 +40,8 @@ $("#stateButton").click(function () {
   $("#fillMe").hide();
   $("#searchBar").hide();
   $("#searchButton").hide();
+  $("#state-entered").val("");
+  
 });
 
 $("#takeMeHome").on("click", function () {
@@ -55,6 +57,7 @@ $("#takeMeHome").on("click", function () {
   $(".clickEnter").show();
   $("#takeMeHome").hide();
 });
+
 
 
 // API

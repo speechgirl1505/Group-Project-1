@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
 </head>
 
 <body>
@@ -32,9 +35,9 @@
     <div class="main-container container mx-auto">
            
         <div>
-            <a class="NPSBtn animated fadeIn" id="NPSButton" target="_blank"><img src="assets/images/NPS-sign1 copy.png" id="startMeUp"></a>
+            <a class="NPSBtn animated fadeIn" id="NPSButton" target="_blank"><img src="assets/images/NPS-sign1 copy.png" id="startMeUp">
             <!-- In the main container we will start with the leafLet Map showing all the tooltips for the National Parks -->
-            <h2 class="clickEnter">CLICK TO ENTER</h2> 
+            <h2 class="clickEnter">CLICK TO ENTER</h2> </a>
             <h2 class="npfont parksNear animated fadeIn" id="putItIn"><i class="fas fa-compass"></i> NATIONAL PARKS NEAR ME <i class="fas fa-tree"></i>
             </h2>
             <div>
@@ -53,7 +56,7 @@
             <!-- <form class="form"> -->
                 <div id="searchBar">
                     <input class="form-control mr-sm-2 animated fadeIn" id="state-entered" type="search"
-                        placeholder="'Texas' or 'TX'" aria-label="Search">
+                        placeholder="Enter your state here" aria-label="Search">
                         <i class="fas fa-search fa-2x stateBtnClass animated fadeIn" id="stateButton"></i>
 
             </div>
@@ -61,6 +64,7 @@
                     class="fas fa-search"></i> SEARCH MY STATE</button>
             <!-- </form> -->
         </div>
+
         <div class="cardsGoHere"></div>
     </div>
 
@@ -114,7 +118,10 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="assets/javascript/app.js"></script>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+        <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/acronyms.js"></script>
     <script src="assets/javascript/stateCardGenerator.js"></script>
     <script src="assets/javascript/modals.js"></script>

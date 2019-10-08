@@ -19,6 +19,7 @@ h1, h2, h3 {
 #startMeUp {
   max-width: 450px;
   max-height: 550px;
+  cursor: pointer;
 }
 
 nav {
@@ -127,6 +128,8 @@ input {
   animation-duration: 3s;
 }
 
+#mapid { height: 380px; }
+
 #showModal {
     color: rgb(75, 56, 48);
     border-radius: 10px;
@@ -177,6 +180,10 @@ a:hover {
 
 #npsInfo {
   margin-bottom: 5px;
+}
+
+.clickEnter {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
